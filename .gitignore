@@ -3,3 +3,4 @@ readme.md
 .prettierrc
 .prettierignore
 .Ds_Store
+.gitignore
