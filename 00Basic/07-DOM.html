@@ -15,14 +15,14 @@
         <span>Hello</span><strong>Your Name</strong>
         <img src="./images/hand.svg" alt="" />
       </h1>
-      <button aria-label="이미지변경">
+      <button aria-label="이미지변경" class="btn-avatar">
         <img src="./images/person.svg" class="avatar" />
       </button>
     </header>
     <main class="main">
       <img src="./images/logo.png" class="logo" alt="" />
       <h2 class="heading">선택자</h2>
-      <ul class="selector">
+      <ul class="selector select">
         <li class="item1">
           <a href="">
             <img src="./images/selector1.gif" alt="" />
@@ -291,11 +291,11 @@
           </div>
           <div>
             <button class="btn-disabled">모두 비활성</button>
-            <button>선택한 점수 확인</button>
+            <button class="btn-check-count">선택한 점수 확인</button>
           </div>
         </div>
         <h3>Name</h3>
-        <div class="name">
+        <div class="name change-name">
           <input type="text" value="리베하얀" readonly />
           <button>이름변경</button>
         </div>
@@ -315,6 +315,8 @@
         <h3 class="colspan">Add File</h3>
         <div class="colspan">
           <input type="file" name="" id="" class="file" />
+          <div class="filename"></div>
+          <div class="filesize"></div>
         </div>
       </div>
     </dialog>
