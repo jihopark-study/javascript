@@ -2,7 +2,7 @@
 /*                                 기명함수(함수선언식)                         */
 /* -------------------------------------------------------------------------- */
 function check() {
-  alert('기명함수 입니다.');
+  alert("기명함수 입니다.");
 }
 /* -------------------------------------------------------------------------- */
 /*                               매개변수 Parameters                            */
@@ -25,7 +25,7 @@ function add(num1, num2) {
 /* -------------------------------------------------------------------------- */
 /*                                  매개변수 기본값                             */
 /* -------------------------------------------------------------------------- */
-function defaultName(name = '지호') {
+function defaultName(name = "지호") {
   alert(`${name}님 안녕하세요.`);
 }
 /* -------------------------------------------------------------------------- */
@@ -40,7 +40,7 @@ const multiply = function (number1, number2) {
 /*                                 화살표함수                                    */
 /* -------------------------------------------------------------------------- */
 const moveX = (step) => {
-  const character = document.querySelector('.character');
+  const character = document.querySelector(".character");
   //   character.style.translate = `${step}px`; or
   character.style.translate = step;
 };

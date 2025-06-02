@@ -46,7 +46,7 @@
 // console.log(10 != 6);
 
 // 불일치연산자
-console.log(10 === '10');
+console.log(10 === "10");
 console.log(0 !== false);
 
 // 크기비교연산자
@@ -60,8 +60,8 @@ console.log(5 <= 5);
 console.log(5 <= 10);
 
 // 병합연산자
-let a = '안녕하세요';
-let b = '반갑습니다';
+let a = "안녕하세요";
+let b = "반갑습니다";
 const result = a ?? b;
 console.log(result);
 

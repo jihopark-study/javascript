@@ -1,44 +1,44 @@
-const message = document.querySelector('.message');
-const click = document.querySelector('.click');
-const enter = document.querySelector('.enter');
-const leave = document.querySelector('.leave');
-const inputText = document.querySelector('.input input');
-const change = document.querySelector('.change select');
-const submit = document.querySelector('.submit');
-const submitID = document.querySelector('.submit .id');
-const submitNickname = document.querySelector('.submit .nickname');
-const target = document.querySelector('.target .parent');
+const message = document.querySelector(".message");
+const click = document.querySelector(".click");
+const enter = document.querySelector(".enter");
+const leave = document.querySelector(".leave");
+const inputText = document.querySelector(".input input");
+const change = document.querySelector(".change select");
+const submit = document.querySelector(".submit");
+const submitID = document.querySelector(".submit .id");
+const submitNickname = document.querySelector(".submit .nickname");
+const target = document.querySelector(".target .parent");
 
 const log = function (text) {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   div.innerHTML = text;
 
   message.appendChild(div);
   message.scrollTop = message.scrollHeight;
 };
 
-click.addEventListener('click', function () {
-  log('click');
+click.addEventListener("click", function () {
+  log("click");
 });
 
-enter.addEventListener('mouseenter', function () {
-  log('mouseenter');
+enter.addEventListener("mouseenter", function () {
+  log("mouseenter");
 });
 
-leave.addEventListener('mouseleave', function () {
-  log('mouseleave');
+leave.addEventListener("mouseleave", function () {
+  log("mouseleave");
 });
 
-inputText.addEventListener('input', function (e) {
+inputText.addEventListener("input", function (e) {
   log(e.target.value);
 });
 // 실시간으로 작동
-change.addEventListener('change', function (e) {
+change.addEventListener("change", function (e) {
   log(e.target.value);
 });
 // 포커스가 나갔을 때
 
-submit.addEventListener('submit', function (e) {
+submit.addEventListener("submit", function (e) {
   console.log(e);
   e.preventDefault();
   // const id = submitID.value;
@@ -51,14 +51,14 @@ submit.addEventListener('submit', function (e) {
 });
 // e를 쓰는 이유는 암묵적인 룰
 
-const link = document.querySelector('.link');
+const link = document.querySelector(".link");
 
-link.addEventListener('click', function (e) {
+link.addEventListener("click", function (e) {
   console.log(e);
   e.preventDefault();
 });
 
-target.addEventListener('click', function (e) {
+target.addEventListener("click", function (e) {
   e.preventDefault();
   console.log(e);
 
