@@ -35,11 +35,12 @@
   <h3>개인정보 유효성 검사</h3>
   <div class="block">
     <form class="private">
-      <input type="text" name="name" placeholder="이름" />
-      <input type="email" name="email" placeholder="이메일" />
-      <input type="number" name="age" placeholder="나이" />
-      <button>회원가입</button>
-      <p></p>
+      <!-- name을 객체로 쓰기위해 -->
+      <input class="name" type="text" name="name" placeholder="이름" />
+      <input class="email" type="email" name="email" placeholder="이메일" />
+      <input class="age" type="number" name="age" placeholder="나이" />
+      <button type="submit">회원가입</button>
+      <p class="warning"></p>
     </form>
   </div>
 

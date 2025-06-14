@@ -224,3 +224,78 @@ itmes.forEach((item) => {
 /* -------------------------------------------------------------------------- */
 /*                                   DOM 삽입                                  */
 /* -------------------------------------------------------------------------- */
+// Node
+// html text 주석
+// Dom
+// html text
+
+// submit 이벤트는 어딘가에 전송하기 위해 사용.
+// const form = comment.querySelector("form");
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+// });
+
+const comment = document.querySelector(".comment");
+const addHTML = comment.querySelector(".btn-add-html");
+const commentList = comment.querySelector(".comment-list");
+const commentInput = comment.querySelector("input");
+const addDOM = comment.querySelector(".btn-add-dom");
+
+// addHTML.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   // textContent 텍스트를 삽입하기 위해 사용
+//   // innerHTML은 태그를 삽입하기 위해 사용
+//   // commentList.innerHTML = "";
+//   commentList.innerHTML = `
+//     <li>첫 댓글 <button class="btn-del">삭제</button></li>
+//     <li>두 번째 댓글 <button class="btn-del">삭제</button></li>
+//     <li>세 번째 댓글 <button class="btn-del">삭제</button></li>
+//   `;
+// });
+// insert.prepend("이전텍스트"); -> 첫번째 자식
+// insert.append("이후텍스트");
+addDOM.addEventListener("click", (e) => {
+  e.preventDefault();
+  const value = commentInput.value;
+
+  console.log(value);
+  // commentList.innerHTML = `<li>${value}<button class=""btn-del>삭제</button></li>`;
+
+  // 선택자.insertAdjacentHTML(위치, html);
+  // commentList.insertAdjacentHTML(
+  //   "beforeend",
+  //   `<li>${value}<button class=""btn-del>삭제</button></li>`
+  // );
+
+  // commentList.insertAdjacentHTML(
+  //   "afterbegin",
+  //   `<li>${value}<button class="btn-del">삭제</button></li>`
+  // );
+
+  const liEl = document.createElement("li");
+  const buttonEl = document.createElement("button");
+
+  buttonEl.classList.add("btn-del");
+  buttonEl.textContent = "삭제";
+  liEl.textContent = value;
+
+  liEl.append(buttonEl);
+  console.log(liEl);
+
+  // prepend로 쓰면 태그도 문자형태로 나타남
+  // commentList.prepend(`<li>${value}<button class="btn-del">삭제</button></li>`);
+
+  commentList.prepend(liEl);
+
+  commentInput.value = "";
+  commentInput.focus();
+
+  const delButton = comment.querySelectorAll(".btn-del");
+  delButton.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      console.log("testset");
+
+      e.target.closest("li").remove();
+    });
+  });
+});
