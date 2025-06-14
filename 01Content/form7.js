@@ -14,7 +14,7 @@ const checkRefId = () => {
       message.textContent = "추천인 아이디를 입력해주세요.";
     } else {
       message.style.color = "blue";
-      message.textContent = `${refId}님을 추천하셨습니다.`;
+      message.textContent = `${refId}님을 추천하였습니다.`;
     }
   });
 };
