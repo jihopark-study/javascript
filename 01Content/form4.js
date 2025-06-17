@@ -6,15 +6,21 @@ const allCheck = () => {
     allCheckBox.addEventListener("click", () => {
       const checkBoxs = allCheckBox.closest(".check-list").querySelectorAll("input");
 
-      if (allCheckBox.checked) {
-        checkBoxs.forEach((checkBox) => {
-          checkBox.checked = true;
-        });
-      } else {
-        checkBoxs.forEach((checkBox) => {
-          checkBox.checked = false;
-        });
-      }
+      // [내가 작성한 코드]
+      // if (allCheckBox.checked) {
+      //   checkBoxs.forEach((checkBox) => {
+      //     checkBox.checked = true;
+      //   });
+      // } else {
+      //   checkBoxs.forEach((checkBox) => {
+      //     checkBox.checked = false;
+      //   });
+      // }
+
+      // [쌤 피드백]
+      checkBoxs.forEach((checkBox) => {
+        checkBox.checked = allCheckBox.checked;
+      });
     });
   });
 };

@@ -7,7 +7,7 @@ const login = () => {
   const message = document.querySelector("#popup-message");
 
   loginBtn.addEventListener("click", (e) => {
-    const user = document.querySelector("#txt1_1").value || "사용자";
+    const user = document.querySelector("#txt1_1").value;
 
     e.preventDefault();
     popup.showModal();

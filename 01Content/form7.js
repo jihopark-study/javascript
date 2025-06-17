@@ -42,9 +42,13 @@ const emailStateChange = () => {
     });
   };
 
-  select.addEventListener("change", () => {
-    checkOption();
-  });
+  // [내가 작성한 코드]
+  // select.addEventListener("change", () => {
+  //   checkOption();
+  // });
+
+  // [쌤 피드백]
+  select.addEventListener("change", checkOption);
 
   checkOption();
 };
