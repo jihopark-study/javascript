@@ -85,3 +85,74 @@ if (boardData.length >= 1) {
 // 세자리마다 쉼표 찍기
 // 현재 게시물이 없습니다
 // 첨부파일
+
+// [쌤 코드]
+// const boardData = [
+//   {
+//     no: 0,
+//     category: "보상",
+//     group: "수도권수도건설단",
+//     title: "한강하류권(3차)급수체계조정사업(우선시행구간) 수도권수도건설단 사업 최초 시행구간",
+//     file: true,
+//     writer: "박종환",
+//     date: "2025-05-05",
+//     hit: 1234,
+//   },
+//   {
+//     no: 1,
+//     category: "기타",
+//     group: "광주전남지역본부",
+//     title: "[장흥수도관리단]관로시설 긴급 복구 협력업체 지원 사업",
+//     file: true,
+//     writer: "박종환",
+//     date: "2025-05-05",
+//     hit: 5,
+//   },
+//   {
+//     no: 2,
+//     category: "기타",
+//     group: "경남부산지역본부",
+//     title: "[장흥수도관리단]관로시설 긴급 복구",
+//     file: false,
+//     writer: "관리자",
+//     date: "2025-05-05",
+//     hit: 12,
+//   },
+// ];
+
+// const table = document.querySelector(".table-type1");
+// const tbody = table.querySelector("tbody");
+// const count = document.querySelector(".count");
+// count.textContent = `현재게시물 ${boardData.length}개`;
+
+// if (boardData.length === 0) {
+//   tbody.innerHTML = `
+//     <tr>
+//         <td colspan="8">현재 게시물이 존재하지 않습니다.</td>
+//     </tr>
+//     `;
+// } else {
+//   tbody.innerHTML = boardData
+//     .map((item) => {
+//       const { category, date, file, group, hit, no, title, writer } = item;
+//       return /*html */ `
+//         <tr>
+//             <td>${no}</td>
+//             <td>${category}</td>
+//             <td>${group}</td>
+//             <td class="text-left">
+//                 <a href="">
+//                 ${title}
+//                 </a>
+//             </td>
+//             <td>
+//                 <a href="">${file ? '<img src="./images/ico_file.svg" alt="" />' : "-"}</a>
+//             </td>
+//             <td>${writer}</td>
+//             <td>${date}</td>
+//             <td>${hit.toLocaleString()}</td>
+//         </tr>
+//       `;
+//     })
+//     .join("");
+// }

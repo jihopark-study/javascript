@@ -9,5 +9,4 @@ const arrowDefault = () => {
   console.log("default2");
 };
 export default arrowDefault;
-
-// default는 한 개밖에 내보낼 수 없어서
+// default는 한 개 밖에 내보낼 수 없음
