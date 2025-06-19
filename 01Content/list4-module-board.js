@@ -1,15 +1,21 @@
 /* --------------------------------- 2주차 과제 --------------------------------- */
 
 // 게시판 리스트
-export const BoardData = () => {
+export const BoardData = (data) => {
   const tabContent = document.querySelector(".tab-content");
   const list = document.querySelector(".news-list");
 
-  tabContent.innerHTML = data.map((item) => {
-    const { category, title, date } = item;
+  if (data.length === 0) {
+    list.innerHTML = `
+      <li>현재 데이터가 존재하지 않습니다.</li>
+    `;
+  }
 
-    return `
-      <ul class="news-list mt45">
+  list.innerHTML = data
+    .map((item) => {
+      const { category, title, date } = item;
+
+      return `
         <li>
           <a href="">
             <span class="category">뉴스토마토</span>
@@ -17,10 +23,9 @@ export const BoardData = () => {
             <span class="date">2024.05.16</span>
           </a>
         </li>
-        <li>현재 데이터가 존재하지 않습니다.</li>
-      </ul>
-    `;
-  });
+      `;
+    })
+    .join("");
 };
 
 // 탭메뉴

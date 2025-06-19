@@ -6,5 +6,5 @@ import { press, official } from "./data/list4-module-data.js";
 // 리스트
 import { BoardData, Tab } from "./list4-module-board.js";
 
-BoardData();
+BoardData(press);
 Tab();
