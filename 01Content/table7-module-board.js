@@ -1,21 +1,17 @@
 /* --------------------------------- 2주차 과제 --------------------------------- */
 
-import { data } from "./data/table7-module-data.js";
+// 게시판
+export const BoardData = (data) => {
+  const tbody = document.querySelector(".table tbody");
+  const count = document.querySelector(".table-info span");
 
-// 테이블 데이터
-const tbody = document.querySelector(".table tbody");
-const tr = tbody.querySelector(".question");
-const count = document.querySelector(".table-info span");
-
-export const BoardData = () => {
   count.textContent = data.length;
-
   tbody.innerHTML = data
-    .map((item) => {
+    .map((item, index) => {
       const { category, title, answer } = item;
       return `
         <tr class="question">
-            <td></td>
+            <td>${index + 1}</td>
             <td>${category}</td>
             <td><button>${title}</button></td>
         </tr>
