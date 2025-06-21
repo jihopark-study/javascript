@@ -3,9 +3,15 @@
   --line2: #222;
   --text: #575757;
 
+  width: 200px;
   border-top: 2px solid var(--line2);
   > li {
     border-bottom: 1px solid var(--line);
+    &:has(button.active){
+      .depth{
+        display: block;
+      }
+    }
     > button,
     > a {
       display: block;
@@ -36,6 +42,7 @@
     }
   }
   .depth {
+    display: none;
     padding: 1px 16px 17px;
     a {
       color: var(--text);

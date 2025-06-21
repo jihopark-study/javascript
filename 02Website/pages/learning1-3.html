@@ -18,6 +18,7 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script type="module" src="../js/global.js"></script>
 </head>
 
 <body>
@@ -161,10 +162,25 @@
           <tr>
             <th>구분</th>
             <td>
-              <select class="select" style="--width:270px">
+              <!-- <select class="select" style="--width:270px">
                 <option>선택</option>
-              </select>
+              </select> -->
+
+              <!-- 커스텀 셀렉트 -->
+              <div class="select-box" style="--width:270px">
+                <button>test</button>
+                <div>
+                  <ul>
+                    <li><button type="button" value="data-1">1</button></li>
+                    <li><button type="button" value="data-2">2</button></li>
+                    <li><button type="button" value="data-3">3</button></li>
+                    <li><button type="button" value="data-4">4</button></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /커스텀 셀렉트 -->
             </td>
+
           </tr>
           <tr>
             <th>분야</th>

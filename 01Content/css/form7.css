@@ -183,3 +183,24 @@ table {
     padding: 5px;
   }
 }
+
+.select {
+  display: inline-block;
+  position: relative;
+  &.active {
+    div {
+      grid-template-rows: 1fr;
+    }
+  }
+  div {
+    display: grid;
+    position: absolute;
+    left: 0;
+    top: var(--top, 0);
+    grid-template-rows: 0fr;
+    transition: 0.5s;
+    ul {
+      overflow: hidden;
+    }
+  }
+}

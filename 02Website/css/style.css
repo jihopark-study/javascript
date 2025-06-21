@@ -790,6 +790,49 @@
       font-weight: 400;
       line-height: 16px;
     }
+    /* 커스텀 셀렉트 */
+    .select-box {
+      display: inline-block;
+      position: relative;
+       &.active {
+        div {
+          grid-template-rows: 1fr;
+        }
+      }
+      > button {
+        background: url(../images/ico_select.svg) no-repeat right 20px center var(--grayfa);
+        color: var(--graycc);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        padding-inline: 20px;
+        padding-right: 42px;
+        width: var(--width);
+        height: var(--height);
+        border: 1px solid var(--graye1);
+        box-sizing: border-box;
+      }
+      div {
+        display: grid;
+        grid-template-rows: 0fr;
+
+        position: absolute;
+        left: 0;
+        font-size: 0;
+        border: 1px solid var(--gray99);
+        ul {
+          overflow: hidden;
+        }
+        li + li {
+          border-top: 1px solid var(--gray99);
+        }
+        button {
+          min-width: 80px;
+          padding: 2px 10px;
+          text-align: left;
+        }
+      }
+    }
     .form-date {
       display: flex;
       gap: 10px;

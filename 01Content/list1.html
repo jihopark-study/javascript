@@ -7,18 +7,36 @@
   <title>리스트1</title>
   <link rel="stylesheet" href="./css/list1.css" />
   <link rel="stylesheet" href="./css/reset.css" />
+  <script type="module" src="./js/global.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
     <nav>
-      <ul class="tab-type1">
+      <ul class="tab-type1 tab">
         <li><button>분양공고 보기</button></li>
         <li><button>분양레터 구독신청</button></li>
         <li><button class="active">분양레터 해지신청</button></li>
       </ul>
     </nav>
-    <div class="tab-content mt26">탭내용</div>
+    <div class="tab-contents">
+      <div class="tab-content mt26">탭내용1</div>
+      <div class="tab-content mt26">탭내용2</div>
+      <div class="tab-content active mt26">탭내용3</div>
+    </div>
+
+    <nav>
+      <ul class="tab-type1 tab2">
+        <li><button>분양공고 보기</button></li>
+        <li><button>분양레터 구독신청</button></li>
+        <li><button class="active">분양레터 해지신청</button></li>
+      </ul>
+    </nav>
+    <div class="tab-contents2">
+      <div class="tab-content mt26">탭내용1</div>
+      <div class="tab-content mt26">탭내용2</div>
+      <div class="tab-content active mt26">탭내용3</div>
+    </div>
   </div>
 </body>
 
