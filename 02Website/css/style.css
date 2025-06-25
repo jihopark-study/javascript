@@ -467,7 +467,7 @@
     .profile .profile__name strong {
       font-weight: 500;
     }
-    .profile__alram {
+    .profile__alarm {
       display: inline-flex;
       color: var(--white);
       font-family: var(--eng);
@@ -478,7 +478,7 @@
       border-radius: 10px;
       background: var(--blue);
     }
-    .avatar .profile__alram {
+    .avatar .profile__alarm {
       position: absolute;
       right: -6px;
       top: 50%;
@@ -498,7 +498,7 @@
       border-radius: 1000px;
     }
     .header .avatar {
-      anchor-name: --alram;
+      anchor-name: --alarm;
     }
     .comment .avatar img {
       width: 100%;
@@ -886,9 +886,9 @@
       overflow: hidden;
     }
   }
-  @layer Alram {
-    .alram {
-      inset: anchor(--alram bottom) anchor(--alram right) auto auto;
+  @layer alarm {
+    .alarm {
+      inset: anchor(--alarm bottom) anchor(--alarm right) auto auto;
       padding: 20px;
       width: 400px;
       height: 318px;
@@ -901,56 +901,56 @@
       transition: 0.5s allow-discrete;
       /* 시작 스타일상태 ➡️ 전환상태 ➡️ 기본상태 */
     }
-    .alram:popover-open {
+    .alarm:popover-open {
       opacity: 1;
       transform: translateY(23px);
     }
     @starting-style {
-      .alram:popover-open {
+      .alarm:popover-open {
         transform: translateY(0);
         opacity: 0;
       }
     }
-    .alram::-webkit-scrollbar {
+    .alarm::-webkit-scrollbar {
       background: none;
       width: 5px;
     }
-    .alram::-webkit-scrollbar-thumb {
+    .alarm::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background: rgba(255, 255, 255, 0.2);
     }
-    .alram li {
+    .alarm li {
       display: grid;
       grid-template-columns: min-content min-content 1fr;
       gap: 9px 20px;
       align-items: center;
     }
-    .alram li + li {
+    .alarm li + li {
       border-top: 1px solid var(--gray20);
       padding-top: 20px;
       margin-top: 20px;
     }
-    .alram__date {
+    .alarm__date {
       color: var(--gray99);
       font-size: 14px;
       line-height: 200%;
       letter-spacing: -0.7px;
       white-space: nowrap;
     }
-    .alram__writer {
+    .alarm__writer {
       color: var(--gray99);
       font-size: 14px;
       line-height: 200%;
       letter-spacing: -0.7px;
       white-space: nowrap;
     }
-    .alram__content {
+    .alarm__content {
       color: var(--grayed);
       font-size: 14px;
       letter-spacing: -0.7px;
       grid-column: 1/-1;
     }
-    .alram__del {
+    .alarm__del {
       justify-self: end;
       background-color: transparent;
     }

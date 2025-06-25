@@ -1,6 +1,6 @@
 import { GNB } from "../main.js";
 import { Select } from "./Select.js";
-import { Profile } from "./Profile.js";
+import { Alarm } from "./Alarm.js";
 GNB({
   parent: ".gnb ul",
   depthClassName: "depth2",
@@ -8,4 +8,4 @@ GNB({
 Select((value) => {
   console.log(value);
 });
-Profile();
+Alarm();
