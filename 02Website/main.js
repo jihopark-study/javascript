@@ -25,7 +25,7 @@ export const GNB = (option = {}) => {
   const GNBBind = () => {
     const result = data
       .map((item) => {
-        console.log(item);
+        // console.log(item);
 
         return `
           <li>
