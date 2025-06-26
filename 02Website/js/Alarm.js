@@ -1,4 +1,4 @@
-import { data } from "../data/profile_data.js";
+import { data } from "../data/alarm_data.js";
 
 export const Alarm = () => {
   const config = {
